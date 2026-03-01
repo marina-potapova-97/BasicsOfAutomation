@@ -1,10 +1,10 @@
 package ru.netology.service;
 
-import org.junit.Assert;
-import org.junit.Test;
 
-public class CashbackHackServiceTest {
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
+public class CashbackHackServiceJupiter5Test {
     @Test
     public void shouldReturnCorrectRemainWhenAmountIsZero(){
         CashbackHackService service = new CashbackHackService();
@@ -12,7 +12,7 @@ public class CashbackHackServiceTest {
         int actual = service.remain(amount);
         int expected = 1000;
 
-        Assert.assertEquals(expected,actual);
+        Assertions.assertEquals(expected,actual);
 
     }
     @Test
@@ -21,7 +21,7 @@ public class CashbackHackServiceTest {
         int amount = 500;
         int expected = 500;
         int actual = service.remain(amount);
-        Assert.assertEquals(expected,actual);
+        Assertions.assertEquals(expected,actual);
     }
     @Test
     public void shouldReturnCorrectRemainWhenAmountIsMoreThenBoundary() {
@@ -29,7 +29,7 @@ public class CashbackHackServiceTest {
         int amount = 1500;
         int expected = 500;
         int actual = service.remain(amount);
-        Assert.assertEquals(expected,actual);
+        Assertions.assertEquals(expected,actual);
     }
     @Test
     public void shouldReturnZeroIfAmountIsBoundary() {
@@ -37,8 +37,6 @@ public class CashbackHackServiceTest {
         int amount = 1000;
         int expected = 0;
         int actual = service.remain(amount);
-        Assert.assertEquals(expected,actual);
+        Assertions.assertEquals(expected,actual);
     }
-
 }
-
